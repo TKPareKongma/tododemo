@@ -1,59 +1,46 @@
-import React, {useState} from 'react'
+import React from 'react';
+import Login, { Render } from 'react-login-page';
+import Logo from 'react-login-page/logo';
 
-function App() {
-
-  const [todoList, settodoList] = useState(["task 1"])
-  const [text, setText] = useState("")
-
-  const onTextChange = ({target: {value}}) => {
-
-    console.log(value);
-
-
-    setText(value)
-
-  }
-
-  const addTask = () => {
-
-    settodoList([
-      ...todoList,
-      text
-    ])
-
-
-  }
-
+const App = () => {
   return (
-    <div>
-
-      <div>
-        <input type="text" value={text} onChange={ onTextChange } />
-        <button onClick={addTask} >Add Task</button>
-      </div>
-
-      <div>
-        {
-
-         todoList.map((todo, index) => {
+    <Login>
+      <Render>
+        {({ fields, buttons, blocks, $$index }) => {
           return (
-            <div className="todo" key={index} >
-              {todo}
+            <div>
+              <header>
+                {blocks.logo} {blocks.title}
+              </header>
+              <div>
+                <label>{fields.username}</label>
+              </div>
+              <div>
+                <label>{fields.password}</label>
+              </div>
+              <div>
+                {buttons.submit}
+                {buttons.reset}
+              </div>
             </div>
-
-
-          )
-          })   
-        }
-
-      </div>
-
-
-      <div className="todo">
-        task 2
-      </div>
-
-    </div>
-  )
-}
+          );
+        }}
+      </Render>
+      <Login.Block keyname="logo" tagName="span">
+        <Logo />
+      </Login.Block>
+      <Login.Block keyname="title" tagName="span">
+        Login
+      </Login.Block>
+      <Login.Input keyname="username" placeholder="Please input Username" />
+      <Login.Input keyname="password" placeholder="please enter password" />
+      <Login.Button keyname="submit" type="submit">
+        Submit
+      </Login.Button>
+      <Login.Button keyname="reset" type="reset">
+        Reset
+      </Login.Button>
+    </Login>
+  );
+};
 export default App;
