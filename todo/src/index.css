@@ -1,13 +1,143 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@import '~antd/dist/antd.css';
+2	
+3	.App {
+4	  text-align: center;
+5	}
+6	
+7	html {
+8	  box-sizing: border-box;
+9	  outline: none;
+10	  overflow: auto;
+11	}
+12	
+13	*,
+14	*:before,
+15	*:after {
+16	  margin: 0;
+17	  padding: 0;
+18	  box-sizing: inherit;
+19	}
+20	
+21	h1,
+22	h2,
+23	h3,
+24	h4,
+25	h5,
+26	h6 {
+27	  margin: 0;
+28	  font-weight: bold;
+29	}
+30	
+31	p {
+32	  margin: 0;
+33	}
+34	
+35	body {
+36	  margin: 0;
+37	  background-color: #fff;
+38	}
+39	
+40	.container {
+41	  width: 100%;
+42	  max-width: 900px;
+43	  margin: auto;
+44	  padding: 20px 0;
+45	  text-align: left;
+46	}
+47	
+48	.header {
+49	  align-items: center;
+50	  padding: 25px 0;
+51	  background-color: #208AEC;
+52	}
+53	
+54	.header_logo {
+55	  height: 55px;
+56	  margin-bottom: 20px;
+57	  object-fit: contain;
+58	}
+59	
+60	.header_text_bold {
+61	  margin-bottom: 3px;
+62	  color: rgba(255, 255, 255, 0.9);
+63	  font-size: 16px;
+64	  font-weight: bold;
+65	}
+66	
+67	.header_text {
+68	  color: rgba(255, 255, 255, 0.9);
+69	  font-size: 15px;
+70	}
+71	
+72	.heading {
+73	  font-size: 22px;
+74	}
+75	
+76	.flex {
+77	  display: flex;
+78	}
+79	
+80	.flex_between {
+81	  display: flex;
+82	  justify-content: space-between;
+83	}
+84	
+85	.flex_child {
+86	  flex: 0 0 45%;
+87	}
+88	
+89	.heading_button {
+90	  margin-left: 12px;
+91	}
+92	
+93	.list_item {
+94	  padding-bottom: 15px;
+95	  margin-bottom: 15px;
+96	  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+97	  text-align: left;
+98	}
+99	
+100	.list_item_title {
+101	  color: rgba(0, 0, 0, 0.87);
+102	  font-size: 17px;
+103	}
+104	
+105	.list_item_description {
+106	  color: rgba(0, 0, 0, 0.5);
+107	  font-size: 15px;
+108	}
+109	
+110	.form_input {
+111	  margin-bottom: 20px;
+112	}
+113	
+114	.login-social {
+115	  display: flex;
+116	  justify-content: center;
+117	  margin-bottom: 30px;
+118	}
+119	
+120	.login-social-item {
+121	  width: 54px;
+122	  height: 54px;
+123	  border-radius: 54px;
+124	  padding: 12px;
+125	  margin: 0 12px;
+126	  border: 1px solid #e6e6e6;
+127	  box-shadow: 0 2px 4px #d6d6d6;
+128	}
+129	
+130	.login-social-item--facebook {
+131	  padding: 4px;
+132	  background-color: #3C5B9B;
+133	}
+134	
+135	.login-social-item__image {
+136	  width: 100%;
+137	}
+138	
+139	.form__hint {
+140	  color: rgba(0, 0, 0, 0.5);
+141	  font-size: 16px;
+142	  text-align: center;
+143	}

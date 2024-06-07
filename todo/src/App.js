@@ -1,46 +1,25 @@
-import React from 'react';
-import Login, { Render } from 'react-login-page';
-import Logo from 'react-login-page/logo';
+import React from "react";
 
-const App = () => {
-  return (
-    <Login>
-      <Render>
-        {({ fields, buttons, blocks, $$index }) => {
-          return (
-            <div>
-              <header>
-                {blocks.logo} {blocks.title}
-              </header>
-              <div>
-                <label>{fields.username}</label>
-              </div>
-              <div>
-                <label>{fields.password}</label>
-              </div>
-              <div>
-                {buttons.submit}
-                {buttons.reset}
-              </div>
-            </div>
-          );
-        }}
-      </Render>
-      <Login.Block keyname="logo" tagName="span">
-        <Logo />
-      </Login.Block>
-      <Login.Block keyname="title" tagName="span">
-        Login
-      </Login.Block>
-      <Login.Input keyname="username" placeholder="Please input Username" />
-      <Login.Input keyname="password" placeholder="please enter password" />
-      <Login.Button keyname="submit" type="submit">
-        Submit
-      </Login.Button>
-      <Login.Button keyname="reset" type="reset">
-        Reset
-      </Login.Button>
-    </Login>
-  );
-};
-export default App;
+
+function ForgotPassword(){
+  
+  
+  const handleSubmit = async(e)=>{
+    const emalVal = e.target.email.value;
+    
+        alert("Check your gmail")
+    .catch(err=>{
+        alert(err.code)
+    })
+  }
+  return(
+    <div className="App">
+      <h1>ForgotPassword</h1>
+      <form onSubmit={(e)=>handleSubmit(e)}>
+          <input name="email" /><br></br>
+          <button>Reset</button>
+      </form>
+    </div>
+  )
+}
+export default ForgotPassword;
